@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manual Primes", "Manual Primes\Manual Primes.csproj", "{AB7E8474-961D-479F-BBD7-ECAF5E84440D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7E8474-961D-479F-BBD7-ECAF5E84440D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7E8474-961D-479F-BBD7-ECAF5E84440D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7E8474-961D-479F-BBD7-ECAF5E84440D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7E8474-961D-479F-BBD7-ECAF5E84440D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A8CD4B4-7072-4592-8596-A8B29C36EA19}
+	EndGlobalSection
+EndGlobal
