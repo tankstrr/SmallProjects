@@ -19,6 +19,9 @@ namespace Pi
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Clear();
             Console.WriteLine("  pi(15) = 3.141592653589793 (NASA GNC)");
             Console.WriteLine("  pi(16) = 3.1415926535897932 (NASA GPS)");
             Console.WriteLine("  pi(32) = 3.14159265358979323846264338327950 (Universe Constants)");
