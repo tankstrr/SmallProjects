@@ -19,7 +19,7 @@ namespace Monopoly_Probabilities
         public static ConsoleColor bcolor;
         public static int gameCount = 0;
         public static int gameDisplay = 100000;
-        public static int totalRollsNum = 100;
+        public static int totalRollsNum = 30;
 
         static void Main(string[] args)
         {
@@ -121,7 +121,7 @@ namespace Monopoly_Probabilities
                 "Black", // "Ventor Ave",
                 "Black", // "Water Works",
                 "Black", // "Marvin Gardens",
-                "Black", // "GO TO JAIL",
+                "Blue", // "GO TO JAIL",
                 "Black", // "Pacific Ave",
                 "Black", // "North Carolina Ave",
                 "Black", // "Community Chest",
@@ -151,10 +151,10 @@ namespace Monopoly_Probabilities
                 "DarkMagenta", // "States Ave",
                 "DarkMagenta", // "Virginia Ave",
                 "Gray", // "Pennsylvania Railroad",
-                "Gray", // "St. James Place",
+                "DarkYellow", // "St. James Place",
                 "Gray", // "Community Chest",
-                "Gray", // "Tennesee Ave",
-                "Gray", // "New Your Ave",
+                "DarkYellow", // "Tennesee Ave",
+                "DarkYellow", // "New Your Ave",
                 "Gray", // "Free Parking",
                 "Red", // "Kentucky Ave",
                 "Gray", // "Chance",
@@ -183,7 +183,7 @@ namespace Monopoly_Probabilities
             if (totalGames == "")
             {
                 totalGamesNum = 1000000;
-                totalGamesNum = 10;
+                // totalGamesNum = 10;
             }
             else
             {
@@ -366,6 +366,8 @@ namespace Monopoly_Probabilities
                     gameCount++;
                 }
 
+                if (detail) { Console.WriteLine(""); }
+                if (detail) { Console.WriteLine("* GAME # {0:N0} OVER *", h); }
                 if (detail) { Console.ReadKey(); }
                 if (detail) { Console.WriteLine(""); }
                 if (detail) { Console.WriteLine(""); }
@@ -404,6 +406,7 @@ namespace Monopoly_Probabilities
         static void InitializeChance()
         {
             string[] wordArray = new string[] { "ATG", "ATI", "ATS", "ANU", "ANR", "---", "---", "B3S", "GTJ", "---", "---", "ATR", "ATB", "---", "---", "---" };
+            if (detail) { Console.Write("**** CHANCE "); }
             Shuffle(wordArray);
             chanceDeck = wordArray;
         }
@@ -411,6 +414,7 @@ namespace Monopoly_Probabilities
         static void InitializeComm()
         {
             string[] wordArray = new string[] { "ATG", "---", "---", "---", "---", "GTJ", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", };
+            if (detail) { Console.Write("**** COMMUNITY "); }
             Shuffle(wordArray);
             commDeck = wordArray;
         }
@@ -452,7 +456,7 @@ namespace Monopoly_Probabilities
                 wordArray[i] = wordArray[swapIndex];
                 wordArray[swapIndex] = temp;
             }
-            if (detail) { Console.WriteLine("**** SHUFFLED ****"); }
+            if (detail) { Console.WriteLine("SHUFFLED ****"); }
             return wordArray;
         }
 
