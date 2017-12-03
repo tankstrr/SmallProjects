@@ -112,8 +112,11 @@ namespace Pi
 
             stopwatch.Stop();
             TimeSpan ts = stopwatch.Elapsed;
-            Console.WriteLine("Calc Time {0}", ts);
-
+            double totalSecs = ts.TotalSeconds;
+            Console.WriteLine("Calc Time: {0}", ts);
+            decimal stepsPerSec = e / Convert.ToDecimal(totalSecs);
+            Console.WriteLine("Steps/Sec: {0}", stepsPerSec);
+            Console.Write("Press any key to exit...");
             Console.ReadKey();
 
         }
