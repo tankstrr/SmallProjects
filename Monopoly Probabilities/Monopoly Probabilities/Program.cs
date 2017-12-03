@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Monopoly_Probabilities
@@ -14,6 +15,8 @@ namespace Monopoly_Probabilities
         public static string NewChance;
         public static string NewComm;
         public static bool detail;
+        public static ConsoleColor fcolor;
+        public static ConsoleColor bcolor;
         public static int gameCount = 0;
         public static int gameDisplay = 100000;
         public static int totalRollsNum = 100;
@@ -86,12 +89,101 @@ namespace Monopoly_Probabilities
                 "Boardwalk"
             };
 
-            Console.Write("How Many Games? (blank = 1M): ");
+            string[] mForeColor = new string[]
+            {
+                "Black", //"Go",
+                "White", //"Mediteranean Ave",
+                "Black", // "Community Chest",
+                "White", // "Baltic Ave",
+                "Black", // "Income Tax",
+                "Black", // "Reading Railroad",
+                "Black", // "Oriental Ave",
+                "Black", // "Chance",
+                "Black", // "Vermont Ave",
+                "Black", // "Connecticut Ave",
+                "Black", // "Jail (Just Visiting)",
+                "White", // "St. Charles Place",
+                "Black", // "Electric Company",
+                "White", // "States Ave",
+                "White", // "Virginia Ave",
+                "Black", // "Pennsylvania Railroad",
+                "Black", // "St. James Place",
+                "Black", // "Community Chest",
+                "Black", // "Tennesee Ave",
+                "Black", // "New Your Ave",
+                "Red", // "Free Parking",
+                "White", // "Kentucky Ave",
+                "Black", // "Chance",
+                "White", // "Indiana Ave",
+                "White", // "Illinois Ave",
+                "Black", // "B & O Railroad",
+                "Black", // "Atlantic Ave",
+                "Black", // "Ventor Ave",
+                "Black", // "Water Works",
+                "Black", // "Marvin Gardens",
+                "Black", // "GO TO JAIL",
+                "Black", // "Pacific Ave",
+                "Black", // "North Carolina Ave",
+                "Black", // "Community Chest",
+                "Black", // "Pennsylvania Avenue",
+                "Black", // "Short Line",
+                "Black", // "Chance",
+                "White", // "Park Place",
+                "Black", // "Luxury Tax",
+                "White" // "Boardwalk"
+            };
+
+            string[] mBackColor = new string[]
+            {
+                "Gray", //"Go",
+                "DarkYellow", //"Mediteranean Ave",
+                "Gray", // "Community Chest",
+                "DarkYellow", // "Baltic Ave",
+                "Gray", // "Income Tax",
+                "Gray", // "Reading Railroad",
+                "Cyan", // "Oriental Ave",
+                "Gray", // "Chance",
+                "Cyan", // "Vermont Ave",
+                "Cyan", // "Connecticut Ave",
+                "Gray", // "Jail (Just Visiting)",
+                "DarkMagenta", // "St. Charles Place",
+                "Gray", // "Electric Company",
+                "DarkMagenta", // "States Ave",
+                "DarkMagenta", // "Virginia Ave",
+                "Gray", // "Pennsylvania Railroad",
+                "Gray", // "St. James Place",
+                "Gray", // "Community Chest",
+                "Gray", // "Tennesee Ave",
+                "Gray", // "New Your Ave",
+                "Gray", // "Free Parking",
+                "Red", // "Kentucky Ave",
+                "Gray", // "Chance",
+                "Red", // "Indiana Ave",
+                "Red", // "Illinois Ave",
+                "Gray", // "B & O Railroad",
+                "Yellow", // "Atlantic Ave",
+                "Yellow", // "Ventor Ave",
+                "Gray", // "Water Works",
+                "Yellow", // "Marvin Gardens",
+                "Gray", // "GO TO JAIL",
+                "Green", // "Pacific Ave",
+                "Green", // "North Carolina Ave",
+                "Gray", // "Community Chest",
+                "Green", // "Pennsylvania Avenue",
+                "Gray", // "Short Line",
+                "Gray", // "Chance",
+                "Blue", // "Park Place",
+                "Gray", // "Luxury Tax",
+                "Blue" // "Boardwalk"
+            };
+
+            Console.Write("How Many Games? (blank = 10): ");
             string totalGames = Console.ReadLine();
             int totalGamesNum;
             if (totalGames == "")
             {
                 totalGamesNum = 1000000;
+                totalGamesNum = 10;
             }
             else
             {
@@ -285,7 +377,15 @@ namespace Monopoly_Probabilities
                 decimal percent = Decimal.Divide(spaceCount[t], gTotalRolls) * 100;
                 int graphLength = Convert.ToInt32(percent * 4);
                 string graph = new String('*', graphLength);
-                Console.WriteLine("{0,2}, {1,12:N0} {2,21}  %{3} {4}", t, spaceCount[t], mBoard[t], percent.ToString("n2"), graph);
+                fcolor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), mForeColor[t]);
+                bcolor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), mBackColor[t]);
+                // Console.WriteLine("{0,2}, {1,12:N0} {2,21}  %{3} {4}", t, spaceCount[t], mBoard[t], percent.ToString("n2"), graph);
+                Console.Write("{0,2}, {1,12:N0} ", t, spaceCount[t]);
+                Console.ForegroundColor = fcolor;
+                Console.BackgroundColor = bcolor;
+                Console.Write(" {0,21} ", mBoard[t]);
+                Console.ResetColor();
+                Console.WriteLine(" %{0} {1}", percent.ToString("n2"), graph);
             }
             Console.WriteLine("1 double : {0:#,0}", double1);
             Console.WriteLine("2 doubles: {0:#,0}", double2);
