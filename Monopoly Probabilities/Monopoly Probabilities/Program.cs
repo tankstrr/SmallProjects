@@ -177,7 +177,7 @@ namespace Monopoly_Probabilities
                 "Blue" // "Boardwalk"
             };
 
-            Console.Write("How Many Games? (blank = 10): ");
+            Console.Write("How Many Games? (blank = 1M): ");
             string totalGames = Console.ReadLine();
             int totalGamesNum;
             if (totalGames == "")
