@@ -17,7 +17,7 @@ namespace Conversion_Test
                 Console.WriteLine("Converted number is {0,12}m", ToSI(baseNum, "##,##0.00"));
                 baseNum = baseNum + origNum;
 
-                System.Threading.Thread.Sleep(100);
+                //System.Threading.Thread.Sleep(100);
             }
 
         }
