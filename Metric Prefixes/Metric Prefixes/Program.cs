@@ -1,25 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Conversion_Test
+namespace Metric_Prefixes
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Conversion Test 1.0 by tankstrr");
-            string baseUnit = "";
-            Console.Write("Enter a Number: ");
-            double baseNum = Convert.ToDouble(Console.ReadLine());
-            double origNum = baseNum;
-            while (true)
-            {
-                Console.SetCursorPosition(0, 3);
-                Console.WriteLine("Converted number is {0,12}m", ToSI(baseNum, "##,##0.00"));
-                baseNum = baseNum + origNum;
+            Console.WriteLine("Metric Prefixes");
 
-                System.Threading.Thread.Sleep(100);
-            }
-
+            double testNum = 1540000;
+            Console.WriteLine(ToSI(testNum)+"m");
+            Console.ReadKey();
         }
 
         static string ToSI(double d, string format = null)
@@ -27,7 +22,7 @@ namespace Conversion_Test
             char[] incPrefixes = new[] { 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y' };
             char[] decPrefixes = new[] { 'm', '\u03bc', 'n', 'p', 'f', 'a', 'z', 'y' };
 
-            int degree = (int)Math.Floor(Math.Log10(Math.Abs(d)) / 3);
+            int degree = (int)Math.Floor(Math.Log10(Math.Abs(d)) / 4);
             double scaled = d * Math.Pow(1000, -degree);
 
             char? prefix = null;
@@ -39,6 +34,5 @@ namespace Conversion_Test
 
             return scaled.ToString(format) + " " + prefix;
         }
-
     }
 }
