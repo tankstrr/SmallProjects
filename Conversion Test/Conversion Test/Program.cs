@@ -36,7 +36,7 @@ namespace Conversion_Test
                 Console.SetCursorPosition(0, 3);
                 Console.WriteLine("Converted number is {0,12:N2} {1}m", newNum, newUnit);
 
-                System.Threading.Thread.Sleep(10);
+                //System.Threading.Thread.Sleep(10);
             }
 
         }
