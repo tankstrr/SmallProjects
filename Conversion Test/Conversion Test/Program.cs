@@ -7,7 +7,7 @@ namespace Conversion_Test
         static void Main(string[] args)
         {
             Console.WriteLine("Conversion Test 1.0 by tankstrr");
-            string baseUnit = "";
+            // string baseUnit = "";
             Console.Write("Enter a Number: ");
             double baseNum = Convert.ToDouble(Console.ReadLine());
             double origNum = baseNum;
@@ -38,6 +38,7 @@ namespace Conversion_Test
                 case -1: prefix = decPrefixes[-degree - 1]; break;
             }
 
+            // return scaled.ToString(format) + " " + prefix + " - degree=" + degree;
             return scaled.ToString(format) + " " + prefix;
         }
 
