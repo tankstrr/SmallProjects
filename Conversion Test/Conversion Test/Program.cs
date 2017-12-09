@@ -14,7 +14,7 @@ namespace Conversion_Test
             while (true)
             {
                 // Console.SetCursorPosition(0, 3);
-                Console.WriteLine("Converted number is {0,12}m", ToSI(baseNum, "##,##0.00"));
+                Console.WriteLine("Converted number is {0,8}m", ToSI(baseNum, "##,##0.00"));
                 // baseNum = baseNum + origNum;
                 baseNum = baseNum * 2;
 
@@ -38,7 +38,6 @@ namespace Conversion_Test
                 case -1: prefix = decPrefixes[-degree - 1]; break;
             }
 
-            // return scaled.ToString(format) + " " + prefix + " - degree=" + degree;
             return scaled.ToString(format) + " " + prefix;
         }
 
