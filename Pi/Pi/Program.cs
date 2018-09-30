@@ -20,7 +20,7 @@ namespace Pi
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            // Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Console.WriteLine("  pi(15) = 3.141592653589793 (NASA GNC)");
             Console.WriteLine("  pi(16) = 3.1415926535897932 (NASA GPS)");
@@ -73,6 +73,7 @@ namespace Pi
             decimal c = 4;
             decimal e = 1;
             decimal pix = 3.1415926535897932384626433832795028841971693993751058209m;
+            // int stepDisplay = 100000;
             int stepDisplay = 100000;
             decimal precpi = 0;
 
@@ -131,7 +132,7 @@ namespace Pi
             while (true)
             {
                 j = j * 10;
-                if (j > 1)
+                if ((int)j > 1)
                 {
                     break;
                 }

@@ -261,7 +261,7 @@ namespace Monopoly_Probabilities
                     {
                         NewChance = "";
                         DrawChance();
-                        if (detail) { Console.WriteLine("Your Chance Card: {0} ({1} cards left", NewChance, chanceDeck.Length); }
+                        if (detail) { Console.WriteLine("Your Chance Card: {0} ({1} cards left)", NewChance, chanceDeck.Length); }
                         if (NewChance == "ATG")
                         {
                             boardSpace = 0;
@@ -335,7 +335,7 @@ namespace Monopoly_Probabilities
                     {
                         NewComm = "";
                         DrawComm();
-                        if (detail) { Console.WriteLine("Your Community Chest Card: {0} ({1} cards left", NewComm, commDeck.Length); }
+                        if (detail) { Console.WriteLine("Your Community Chest Card: {0} ({1} cards left)", NewComm, commDeck.Length); }
                         if (NewComm == "ATG")
                         {
                             boardSpace = 0;

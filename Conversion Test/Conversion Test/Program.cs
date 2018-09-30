@@ -7,17 +7,18 @@ namespace Conversion_Test
         static void Main(string[] args)
         {
             Console.WriteLine("Conversion Test 1.0 by tankstrr");
-            string baseUnit = "";
+            // string baseUnit = "";
             Console.Write("Enter a Number: ");
             double baseNum = Convert.ToDouble(Console.ReadLine());
             double origNum = baseNum;
             while (true)
             {
-                Console.SetCursorPosition(0, 3);
-                Console.WriteLine("Converted number is {0,12}m", ToSI(baseNum, "##,##0.00"));
-                baseNum = baseNum + origNum;
+                // Console.SetCursorPosition(0, 3);
+                Console.WriteLine("Converted number is {0,8}m", ToSI(baseNum, "##,##0.00"));
+                // baseNum = baseNum + origNum;
+                baseNum = baseNum * 2;
 
-                //System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(100);
             }
 
         }
