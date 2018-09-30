@@ -25,7 +25,8 @@ namespace Pi
             Console.WriteLine("  pi(15) = 3.141592653589793 (NASA GNC)");
             Console.WriteLine("  pi(16) = 3.1415926535897932 (NASA GPS)");
             Console.WriteLine("  pi(32) = 3.14159265358979323846264338327950 (Universe Constants)");
-            Console.WriteLine("  pi(55) = 3.1415926535897932384626433832795028841971693993751058209");
+//            Console.WriteLine("  pi(55) = 3.1415926535897932384626433832795028841971693993751058209");
+            Console.WriteLine("  pi(55) = ----5----1----5----2----5----3----5----4----5----5");
             Console.WriteLine("pi(calc) = ");
             Console.WriteLine("pi(prec) = ");
             Console.WriteLine("");
