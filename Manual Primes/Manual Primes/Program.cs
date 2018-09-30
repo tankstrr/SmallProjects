@@ -33,7 +33,7 @@ namespace Manual_Primes
             stopwatch.Start(); //added this nice stopwatch start routine 
 
             int foundPrimes = 0;
-            int displayedPrimes = 100;
+            int displayedPrimes = 10;
             Console.WriteLine("Showing every {0}th prime", displayedPrimes);
             int number = 2;
             while (foundPrimes < primesToFind)
