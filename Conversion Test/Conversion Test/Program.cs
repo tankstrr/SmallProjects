@@ -14,11 +14,11 @@ namespace Conversion_Test
             while (true)
             {
                 // Console.SetCursorPosition(0, 3);
-                Console.WriteLine("Converted number is {0,8}m", ToSI(baseNum, "##,##0.00"));
+                Console.WriteLine("Converted number is {0,9}m", ToSI(baseNum, "##,##0.000"));
                 // baseNum = baseNum + origNum;
                 baseNum = baseNum * 2;
 
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(20);
             }
 
         }
@@ -31,7 +31,7 @@ namespace Conversion_Test
             int degree = (int)Math.Floor(Math.Log10(Math.Abs(d)) / 3);
             double scaled = d * Math.Pow(1000, -degree);
 
-            char? prefix = null;
+            char? prefix = ' ';
             switch (Math.Sign(degree))
             {
                 case 1: prefix = incPrefixes[degree - 1]; break;
